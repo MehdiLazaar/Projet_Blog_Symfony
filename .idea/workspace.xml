@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b3110176-944a-46d3-b3b4-970bfe8e0000" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Commun/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Commun/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +211,8 @@
       <workItem from="1728574026575" duration="431000" />
       <workItem from="1728574471604" duration="122000" />
       <workItem from="1728655042589" duration="8453000" />
-      <workItem from="1728995129218" duration="3908000" />
+      <workItem from="1728995129218" duration="5105000" />
+      <workItem from="1729001077740" duration="810000" />
     </task>
     <servers />
   </component>
