@@ -13,14 +13,10 @@
         </div>
         <div class="row">
             <div class="col-md-12 d-flex justify-content-center">
-                <form action="login" method="GET">
-                    <input type="submit" class="btn btn-primary btn-lg my-3" value="Connect" />
-                </form>
+                <a href="{{ path('app_login') }}" class="btn btn-primary btn-lg my-3">Connect</a>
             </div>
             <div class="col-md-12 d-flex justify-content-center">
-                <form action="register" method="GET">
-                    <input type="submit" class="btn btn-primary btn-lg my-3" value="Sign_up" />
-                </form>
+                <a href="{{ path('app_register') }}" class="btn btn-primary btn-lg my-3">Sign_up</a>
             </div>
         </div>
     </section>
