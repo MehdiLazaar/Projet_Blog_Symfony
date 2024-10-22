@@ -1,3 +1,10 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+# Ajout de la redirection pour /
+index_redirect:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
+    defaults:
+        route: app_home
+        permanent: true

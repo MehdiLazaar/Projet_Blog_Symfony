@@ -34,6 +34,6 @@ class AppFixtures extends Fixture
         }
 
         $manager->flush();
-        fclose($file); // Déplacez la fermeture du fichier en dehors de la boucle
+        fclose($file);
     }
 }

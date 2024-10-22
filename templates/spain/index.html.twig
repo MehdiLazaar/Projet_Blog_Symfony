@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Spain beauty{% endblock %}
+{% block title %}Spain Beauty{% endblock %}
 
 {% block body %}
     <section class="container">
@@ -10,49 +10,95 @@
                 <i class="fas fa-book" aria-hidden="true"></i>
             </span>
             <span class="fi fi-es mr-2" style="width: 100px; height: 100px;"></span>
-            <p>Spain, country located in extreme southwestern Europe.
-                It occupies about 85 percent of the Iberian Peninsula, which it shares with its smaller neighbour Portugal.
-                Spain is a storied country of stone castles, snowcapped mountains, vast monuments, and sophisticated cities, all of which have made it a favoured travel destination.
-                The country is geographically and culturally diverse.
-                Its heartland is the Meseta, a broad central plateau half a mile above sea level.
-                Much of the region is traditionally given over to cattle ranching and grain production;
-                it was in this rural setting that Miguel de Cervantes’s Don Quixote tilted at the tall windmills that still dot the landscape in several places.
-                In the country’s northeast are the broad valley of the Ebro River, the mountainous region of Catalonia, and the hilly coastal plain of Valencia.
-                To the northwest is the Cantabrian Mountains,
-                a rugged range in which heavily forested, rain-swept valleys are interspersed with tall peaks.
-                To the south is the citrus-orchard-rich and irrigated lands of the valley of the Guadalquivir River,
-                celebrated in the renowned lyrics of Spanish poets Federico García Lorca and Antonio Machado;
-                over this valley rises the snowcapped Sierra Nevada.
-                The southern portion of the country is desert, an extension of the Sahara made familiar to Americans through the “spaghetti western” films of the 1960s and early ’70s.
-                Lined with palm trees, rosemary bushes, and other tropical vegetation,
-                the southeastern Mediterranean coast and the Balearic Islands enjoy a gentle climate, drawing millions of visitors and retirees, especially from northern Europe.
+            <p>Spain, a country located in extreme southwestern Europe, occupies about 85 percent of the Iberian Peninsula,
+                which it shares with its smaller neighbor Portugal. Spain is a storied country of stone castles,
+                snowcapped mountains, vast monuments, and sophisticated cities, all of which have made it a favored travel destination.
+                The country is geographically and culturally diverse. Its heartland is the Meseta, a broad central plateau half a mile above sea level.
+                Much of the region is traditionally devoted to cattle ranching and grain production; it was in this rural setting that Miguel de Cervantes’s Don Quixote tilted at the tall windmills that still dot the landscape in several places.
+                In the country’s northeast are the broad valley of the Ebro River, the mountainous region of Catalonia, and the hilly coastal plain of Valencia. To the northwest is the Cantabrian Mountains, a rugged range in which heavily forested,
+                rain-swept valleys are interspersed with tall peaks. To the south are the citrus-orchard-rich and irrigated lands of the valley of the Guadalquivir River, celebrated in the renowned lyrics of Spanish poets Federico García Lorca and Antonio Machado;
+                over this valley rises the snowcapped Sierra Nevada. The southern portion of the country is desert, an extension of the Sahara made familiar to Americans through the “spaghetti western” films of the 1960s and early ’70s. Lined with palm trees, rosemary bushes,
+                and other tropical vegetation, the southeastern Mediterranean coast and the Balearic Islands enjoy a gentle climate, drawing millions of visitors and retirees,
+                especially from northern Europe.
             </p>
         </div>
     </section>
     <section class="container-fluid p-5 text-black">
         <div class="container-fluid p-5 text-black">
-            <h2>
-                Spain Capital over the time
-            </h2>
-                <b>Cordoba :</b> Capitale de l'Espagne islamique au 8e siècle sous Abd Al-Rahman I, la ville abrite la Grande Mosquée, un joyau de l'architecture islamique. Au 10e siècle, Cordoue était la ville la plus avancée d'Europe, où coexistaient chrétiens, juifs et musulmans.<br>
-
-                <b>Cangas de Onis :</b> Première capitale du Royaume d'Espagne au 8e siècle sous Pelayo, un noble wisigoth. Aujourd'hui, il reste peu de monuments, mis à part le Pont Romain du 14e siècle.<br>
-                <b>Barcelone :</b> Ancienne capitale du royaume des Wisigoths au 6e siècle, avant que la capitale ne soit déplacée à Tolède. Barcelone fut également la capitale de la République espagnole pendant la guerre civile de 1937 à 1939.<br>
-
-                <b>Toledo :</b> Capitale de l'Espagne aux 6e et 16e siècles, d'abord sous les Wisigoths et plus tard sous l'empereur Charles I. Tolède resta la capitale jusqu'à ce que Madrid prenne le relais en 1561.<br>
-
-                <b>Madrid :</b> Devint la capitale permanente en 1561 sous Philippe II en raison de sa position centrale. Madrid est restée la capitale, avec des interruptions, jusqu'à aujourd'hui.<br>
-
-                <b>Valladolid :</b> Devint brièvement la capitale de l'Empire espagnol de 1601 à 1606, sous l'influence du duc de Lerma. Aujourd'hui, la ville est un centre industriel et commercial important.<br>
-
-                <b>Séville :</b> Capitale pendant deux ans (1808-1810) lors des guerres napoléoniennes, puis capitale de l'Andalousie depuis 1982.<br>
-
-                <b>Cadix :</b> La plus ancienne ville d'Europe, devint la capitale pendant l'occupation napoléonienne (1810-1813). Elle est célèbre pour sa constitution de 1812 et son architecture coloniale.<br>
-
-                <b>Valence :</b> Capitale du gouvernement républicain pendant la guerre civile espagnole de 1936 à 1937, avant de céder à Franco. Aujourd'hui, c'est l'une des villes les plus dynamiques d'Espagne.<br>
-
-                <b>Burgos :</b> Capitale de l'insurrection espagnole entre avril et octobre 1939 pendant la fin de la guerre civile. Aujourd'hui, Burgos est connue pour sa cathédrale et son importance sur le chemin de Saint-Jacques-de-Compostelle.<br>
-            </p>
+            <h2>Spain's Capital Through Time</h2>
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                <tr>
+                    <th>City Name</th>
+                    <th>Creation Date</th>
+                    <th>Abbreviation</th>
+                    <th>Region</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for ville in spainData %}
+                    <tr>
+                        <td>{{ ville.nomVille }}</td>
+                        <td>{{ ville.dateCreation }}</td>
+                        <td>{{ ville.abreviation }}</td>
+                        <td>{{ ville.region }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan='4' class="text-center">
+                            No information available.
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="container-fluid p-5 text-black">
+        <div class="container-fluid p-5 text-black">
+            <h2>Spain's Capital Through Time</h2>
+            <div class="list-group">
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Cordoba:</b></h5>
+                    <p class="mb-1">Capital of Islamic Spain in the 8th century under Abd Al-Rahman I, the city is home to the Great Mosque, a jewel of Islamic architecture. In the 10th century, Cordoba was the most advanced city in Europe, where Christians, Jews, and Muslims coexisted.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Cangas de Onis:</b></h5>
+                    <p class="mb-1">The first capital of the Kingdom of Spain in the 8th century under Pelayo, a Visigoth noble. Today, little remains of the monuments, except for the 14th-century Roman Bridge.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Barcelona:</b></h5>
+                    <p class="mb-1">Former capital of the Visigoth kingdom in the 6th century, before the capital was moved to Toledo. Barcelona was also the capital of the Spanish Republic during the Civil War from 1937 to 1939.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Toledo:</b></h5>
+                    <p class="mb-1">Capital of Spain in the 6th and 16th centuries, first under the Visigoths and later under Emperor Charles I. Toledo remained the capital until Madrid took over in 1561.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Madrid:</b></h5>
+                    <p class="mb-1">Became the permanent capital in 1561 under Philip II due to its central position. Madrid has remained the capital, with interruptions, until today.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Valladolid:</b></h5>
+                    <p class="mb-1">Briefly became the capital of the Spanish Empire from 1601 to 1606, under the influence of the Duke of Lerma. Today, the city is an important industrial and commercial center.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Seville:</b></h5>
+                    <p class="mb-1">Capital for two years (1808-1810) during the Napoleonic Wars, then the capital of Andalusia since 1982.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Cadiz:</b></h5>
+                    <p class="mb-1">The oldest city in Europe, became the capital during the Napoleonic occupation (1810-1813). It is famous for its 1812 constitution and colonial architecture.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Valencia:</b></h5>
+                    <p class="mb-1">Capital of the republican government during the Spanish Civil War from 1936 to 1937, before surrendering to Franco. Today, it is one of the most dynamic cities in Spain.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="mb-1"><b>Burgos:</b></h5>
+                    <p class="mb-1">Capital of the Spanish insurrection between April and October 1939 during the end of the Civil War. Today, Burgos is known for its cathedral and its importance on the Camino de Santiago.</p>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}
