@@ -23,82 +23,102 @@
             </p>
         </div>
     </section>
+
     <section class="container-fluid p-5 text-black">
-        <div class="container-fluid p-5 text-black">
-            <h2>Spain's Capital Through Time</h2>
-            <table class="table table-striped table-hover">
-                <thead class="thead-dark">
-                <tr>
-                    <th>City Name</th>
-                    <th>Creation Date</th>
-                    <th>Abbreviation</th>
-                    <th>Region</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for ville in spainData %}
-                    <tr>
-                        <td>{{ ville.nomVille }}</td>
-                        <td>{{ ville.dateCreation }}</td>
-                        <td>{{ ville.abreviation }}</td>
-                        <td>{{ ville.region }}</td>
-                    </tr>
-                {% else %}
-                    <tr>
-                        <td colspan='4' class="text-center">
-                            No information available.
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+        <h2>Historical Capitals of Spain</h2>
+        <div class="list-group">
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Cordoba:</b></h5>
+                <p class="mb-1">Capital of Islamic Spain in the 8th century under Abd Al-Rahman I, the city is home to the Great Mosque, a jewel of Islamic architecture. In the 10th century, Cordoba was the most advanced city in Europe, where Christians, Jews, and Muslims coexisted.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Cangas de Onis:</b></h5>
+                <p class="mb-1">The first capital of the Kingdom of Spain in the 8th century under Pelayo, a Visigoth noble. Today, little remains of the monuments, except for the 14th-century Roman Bridge.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Barcelona:</b></h5>
+                <p class="mb-1">Former capital of the Visigoth kingdom in the 6th century, before the capital was moved to Toledo. Barcelona was also the capital of the Spanish Republic during the Civil War from 1937 to 1939.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Toledo:</b></h5>
+                <p class="mb-1">Capital of Spain in the 6th and 16th centuries, first under the Visigoths and later under Emperor Charles I. Toledo remained the capital until Madrid took over in 1561.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Madrid:</b></h5>
+                <p class="mb-1">Became the permanent capital in 1561 under Philip II due to its central position. Madrid has remained the capital, with interruptions, until today.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Valladolid:</b></h5>
+                <p class="mb-1">Briefly became the capital of the Spanish Empire from 1601 to 1606, under the influence of the Duke of Lerma. Today, the city is an important industrial and commercial center.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Seville:</b></h5>
+                <p class="mb-1">Capital for two years (1808-1810) during the Napoleonic Wars, then the capital of Andalusia since 1982.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Cadiz:</b></h5>
+                <p class="mb-1">The oldest city in Europe, became the capital during the Napoleonic occupation (1810-1813). It is famous for its 1812 constitution and colonial architecture.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Valencia:</b></h5>
+                <p class="mb-1">Capital of the republican government during the Spanish Civil War from 1936 to 1937, before surrendering to Franco. Today, it is one of the most dynamic cities in Spain.</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1"><b>Burgos:</b></h5>
+                <p class="mb-1">Capital of the Spanish insurrection between April and October 1939 during the end of the Civil War. Today, Burgos is known for its cathedral and its importance on the Camino de Santiago.</p>
+            </div>
         </div>
     </section>
     <section class="container-fluid p-5 text-black">
-        <div class="container-fluid p-5 text-black">
-            <h2>Spain's Capital Through Time</h2>
-            <div class="list-group">
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Cordoba:</b></h5>
-                    <p class="mb-1">Capital of Islamic Spain in the 8th century under Abd Al-Rahman I, the city is home to the Great Mosque, a jewel of Islamic architecture. In the 10th century, Cordoba was the most advanced city in Europe, where Christians, Jews, and Muslims coexisted.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Cangas de Onis:</b></h5>
-                    <p class="mb-1">The first capital of the Kingdom of Spain in the 8th century under Pelayo, a Visigoth noble. Today, little remains of the monuments, except for the 14th-century Roman Bridge.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Barcelona:</b></h5>
-                    <p class="mb-1">Former capital of the Visigoth kingdom in the 6th century, before the capital was moved to Toledo. Barcelona was also the capital of the Spanish Republic during the Civil War from 1937 to 1939.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Toledo:</b></h5>
-                    <p class="mb-1">Capital of Spain in the 6th and 16th centuries, first under the Visigoths and later under Emperor Charles I. Toledo remained the capital until Madrid took over in 1561.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Madrid:</b></h5>
-                    <p class="mb-1">Became the permanent capital in 1561 under Philip II due to its central position. Madrid has remained the capital, with interruptions, until today.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Valladolid:</b></h5>
-                    <p class="mb-1">Briefly became the capital of the Spanish Empire from 1601 to 1606, under the influence of the Duke of Lerma. Today, the city is an important industrial and commercial center.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Seville:</b></h5>
-                    <p class="mb-1">Capital for two years (1808-1810) during the Napoleonic Wars, then the capital of Andalusia since 1982.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Cadiz:</b></h5>
-                    <p class="mb-1">The oldest city in Europe, became the capital during the Napoleonic occupation (1810-1813). It is famous for its 1812 constitution and colonial architecture.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Valencia:</b></h5>
-                    <p class="mb-1">Capital of the republican government during the Spanish Civil War from 1936 to 1937, before surrendering to Franco. Today, it is one of the most dynamic cities in Spain.</p>
-                </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1"><b>Burgos:</b></h5>
-                    <p class="mb-1">Capital of the Spanish insurrection between April and October 1939 during the end of the Civil War. Today, Burgos is known for its cathedral and its importance on the Camino de Santiago.</p>
-                </div>
-            </div>
-        </div>
+        <h2>Spain's Capital Through Time</h2>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th>City Name</th>
+                <th>Creation Date</th>
+                <th>Abbreviation</th>
+                <th>Region</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for ville in spainData %}
+                <tr>
+                    <td>{{ ville.nomVille }}</td>
+                    <td>{{ ville.dateCreation }}</td>
+                    <td>{{ ville.abreviation }}</td>
+                    <td>{{ ville.region }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan='4' class="text-center">
+                        No information available.
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Pagination Controls -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if currentPage > 1 %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('app_spain', {'page': currentPage - 1}) }}">Previous</a>
+                    </li>
+                {% endif %}
+
+                {% for page in 1..totalPages %}
+                    <li class="page-item {% if page == currentPage %}active{% endif %}">
+                        <a class="page-link" href="{{ path('app_spain', {'page': page}) }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+
+                {% if currentPage < totalPages %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('app_spain', {'page': currentPage + 1}) }}">Next</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
     </section>
 {% endblock %}
