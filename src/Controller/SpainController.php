@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\FranceRepository;
 use App\Repository\SpainRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,10 +28,9 @@ class SpainController extends AbstractController
             'totalPages' => $totalPages,
         ]);
     }
-
-    #[Route('/spain/visit', name: 'app_spain_visit')]
-    public function visitSpain(SpainRepository $spainRepository): Response
+    #[Route('/france/visit', name: 'app_france_visit')]
+    public function visitSpain(FranceRepository $franceRepository): Response
     {
-        return $this->render('spain/visit.html.twig', []);
+        return $this->render('france/visit.html.twig', []);
     }
 }

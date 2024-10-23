@@ -13,7 +13,7 @@ class FranceController extends AbstractController
     public function index(FranceRepository $franceRepository): Response
     {
         $franceData = $franceRepository->findAll();
-        return $this->render('spain/index.html.twig', [
+        return $this->render('france/index.html.twig', [
             'franceData' => $franceData,
         ]);
     }

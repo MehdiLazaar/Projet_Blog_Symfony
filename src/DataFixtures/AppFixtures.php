@@ -14,7 +14,7 @@ class AppFixtures extends Fixture
         // Load Spain data
         $this->loadSpainData($manager);
 
-        // Load Historical Capitals data
+        // Load France Data
         $this->loadFranceData($manager);
     }
 

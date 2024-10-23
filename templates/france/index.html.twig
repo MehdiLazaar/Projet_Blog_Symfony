@@ -40,11 +40,11 @@
             </tr>
             </thead>
             <tbody>
-            {% for ville in franceData %}
+            {% for city in franceData %}
             <tr>
-                <td>ville.Location</td>
-                <td>ville.TimePeriod</td>
-                <td>ville.details</td>
+                <td>{{ city.Location }}</td>
+                <td>{{ city.TimePeriod }}</td>
+                <td>{{ city.details }}</td>
             </tr>
             {% else %}
                 <tr>
@@ -55,5 +55,10 @@
             {% endfor %}
             </tbody>
         </table>
+    </section>
+    <section>
+        <div class="englobe">
+            <a class="btn_right" href="{{ path('app_france_visit') }}" role="button">Where to go in France</a>
+        </div>
     </section>
 {% endblock %}
