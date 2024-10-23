@@ -28,9 +28,9 @@ class SpainController extends AbstractController
             'totalPages' => $totalPages,
         ]);
     }
-    #[Route('/france/visit', name: 'app_france_visit')]
+    #[Route('/spain/visit', name: 'app_spain_visit')]
     public function visitSpain(FranceRepository $franceRepository): Response
     {
-        return $this->render('france/visit.html.twig', []);
+        return $this->render('spain/visit.html.twig', []);
     }
 }

@@ -3,18 +3,57 @@
 {% block title %}Hello GermanyController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Mehdi/OneDrive/Bureau/Mehdi/Projets/Projet_Symfony/src/Controller/GermanyController.php'|file_link(0) }}">src/Controller/GermanyController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Mehdi/OneDrive/Bureau/Mehdi/Projets/Projet_Symfony/templates/germany/index.html.twig'|file_link(0) }}">templates/germany/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <section class="container">
+        <div class="container-fluid p-5 text-black text-center">
+            <h1>Germany</h1>
+            <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+            </span>
+            <span class="fi fi-de mr-2" style="width: 100px; height: 100px;"></span>
+        </div>
+        <p>
+            <strong>The Germanic peoples </strong> occupied much of present-day Germany during ancient times.
+            These groups, who spoke one of the Germanic languages, emerged as a distinct community due to the first sound shift known as Grimm’s law.
+            This phenomenon transformed a Proto-Indo-European dialect into a new Proto-Germanic language within the Indo-European language family.
+            As a result, the Proto-Indo-European consonants p, t, and k evolved into Proto-Germanic f, [thorn] (th), and x (h),
+            while the Proto-Indo-European b, d, and g became p, t, and k in Proto-Germanic.
+            Determining the historical context of this shift is challenging, as it is impossible to date it conclusively.
+            It is evident that the people who began speaking Proto-Germanic must have been isolated from other Indo-Europeans for some time,
+            but identifying the archaeological culture that represents this period is not straightforward.
+            One possibility is the Northern European Bronze Age, which thrived in northern Germany and Scandinavia from around 1700 to 450 BCE.
+            Alternatives might include one of the early Iron Age cultures from the same region, such as Wessenstadt (800–600 BCE) or Jastorf (600–300 BCE).
+            Evidence from archaeological findings and place names suggests that while early Germanic peoples likely occupied much of northern Germany during the Bronze and early Iron Ages,
+            Celtic-speaking populations inhabited what is now southern Germany.
+            This region, along with neighboring areas of modern France and Switzerland, was the original homeland of the Celtic La Tène culture.
+            Around the time of Roman expansion northward in the first centuries BCE and CE, Germanic groups began to move south into present-day southern Germany.
+            The evidence indicates that the existing population was gradually Germanized rather than displaced by the Germanic peoples arriving from the north.
+        </p>
+    </section>
+    <section class="container-fluid p-5 text-black">
+        <h2>Historical Capitals of France</h2>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th>City Name</th>
+                <th>Time Period</th>
+                <th>Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for city in germanData %}
+                <tr>
+                    <td>{{ city.period }}</td>
+                    <td>{{ city.period }}</td>
+                    <td>{{ city.description }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan='4' class="text-center">
+                        No information available.
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
 {% endblock %}
