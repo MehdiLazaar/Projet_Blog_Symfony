@@ -17,9 +17,20 @@ class FranceController extends AbstractController
             'franceData' => $franceData,
         ]);
     }
+
     #[Route('/france/visit', name: 'app_france_visit')]
-    public function visitSpain(FranceRepository $franceRepository): Response
+    public function visitFrance(FranceRepository $franceRepository): Response
     {
         return $this->render('france/visit.html.twig', []);
+    }
+
+    #[Route('/france/map', name: 'app_france_map')]
+    public function mapFrance(FranceRepository $franceRepository): Response
+    {
+        $cities = $franceRepository->findAll();
+
+        return $this->render('france/index.html.twig', [
+            'cities' => $cities,
+        ]);
     }
 }

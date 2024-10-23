@@ -1,23 +1,23 @@
-Location,Time Period,Details
-Tournai,before 486,Current-day Belgium
-Soissons,486–936,
-Laon,936–987,
-Paris,987–1419,Residence of the Kings of France, although they were consecrated at Reims.
-Orléans,1108,One of the few consecrations of a French monarch to occur outside of Reims; Louis VI the Fat was consecrated in Orléans Cathedral by Daimbert, Archbishop of Sens. From 13 December 1560 to 31 January 1561, the French States-General also met in the city.
-Troyes,1419–1422,For a short time during the Hundred Years' War, the city was the seat of the royal government.
-Bourges,1422–1444,Charles VII was forced to flee from Paris.
-Tours,1444–1527,Louis XI made the Château de Plessis-lez-Tours his residence.
-Paris,1528–1589,Francis I had established his court in Paris.
-Tours,1589–1594,Faction of parliamentarians faithful to King Henry IV sat at Tours.
-Paris,1594–1682,
-Versailles,1682–1789,From 1682 to 1715, Louis XIV made Versailles his residence and the seat of the French court.
-Paris,1789–1871,On 5 and 6 October 1789, a throng from Paris invaded the castle and forced the royal family to move back to Paris. The National Constituent Assembly followed the King to Paris soon afterward; Versailles lost its role as capital city.
-Versailles,1871,The French Third Republic established Versailles as its provisional seat of government in March 1871 after the Paris Commune took control of Paris.
-Bordeaux,September 1914,The government was relocated from Paris to Bordeaux very briefly during World War I, when it was feared that Paris would soon fall into German hands. These fears were alleviated after the German Army was pushed back at the First Battle of the Marne.
-Tours,10–13 June 1940,The city served as the temporary capital of France during World War II after the government fled Paris due to the German advance.
-Bordeaux,June 1940,The government was relocated from Paris to Tours then Bordeaux very briefly during World War II, when it became apparent that Paris would soon fall into German hands.
-Clermont-Ferrand,29 June 1940,The government was relocated from Bordeaux to Clermont-Ferrand, during a single day, before going to Vichy, which had a larger hotel capacity.
-Vichy,1940–1944,The Third Republic was abolished in Vichy and replaced by the French State.
-Brazzaville,1940–1943,With metropolitan France under Axis powers rule, Brazzaville was announced as the seat of the Free France government.
-Algiers,1943–1944,The city was made the seat of Free France to be closer to the war in Europe.
-Paris,1945-present day,
+Location,Time Period,Details,Latitude,Longitude
+Tournai,before 486,Current-day Belgium,50.605047,3.387969
+Soissons,486–936,,49.381825,3.323850
+Laon,936–987,,49.563292,3.624608
+Paris,987–1419,"Residence of the Kings of France, although they were consecrated at Reims.",48.856613,2.352222
+Orléans,1108,"Consecration of Louis VI the Fat; French States-General met in the city in 1560-1561.",47.902964,1.909251
+Troyes,1419–1422,Seat of the royal government for a short time during the Hundred Years' War.,48.297345,4.074400
+Bourges,1422–1444,Charles VII was forced to flee from Paris.,47.083877,2.395634
+Tours,1444–1527,Louis XI made the Château de Plessis-lez-Tours his residence.,47.394144,0.684840
+Paris,1528–1589,Francis I established his court in Paris.,48.856613,2.352222
+Tours,1589–1594,Faction of parliamentarians faithful to King Henry IV sat at Tours.,47.394144,0.684840
+Paris,1594–1682,,48.856613,2.352222
+Versailles,1682–1789,Louis XIV made Versailles his residence and the seat of the French court.,48.804865,2.120355
+Paris,1789–1871,"The royal family and National Constituent Assembly moved back to Paris.",48.856613,2.352222
+Versailles,1871,Seat of government during the Paris Commune.,48.804865,2.120355
+Bordeaux,September 1914,Government relocated from Paris during World War I.,44.837789,-0.579180
+Tours,10–13 June 1940,Temporary capital during World War II.,47.394144,0.684840
+Bordeaux,June 1940,Government relocated during World War II.,44.837789,-0.579180
+Clermont-Ferrand,29 June 1940,Government briefly relocated from Bordeaux to Clermont-Ferrand.,45.777222,3.087025
+Vichy,1940–1944,The French State replaced the Third Republic.,46.128525,3.426239
+Brazzaville,1940–1943,Seat of Free France during Axis rule in metropolitan France.,-4.263360,15.242885
+Algiers,1943–1944,Seat of Free France to be closer to the war in Europe.,36.737232,3.086472
+Paris,1945–present day,Current capital of France.,48.856613,2.352222

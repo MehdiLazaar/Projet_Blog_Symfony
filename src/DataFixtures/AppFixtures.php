@@ -17,6 +17,7 @@ class AppFixtures extends Fixture
 
         // Load France Data
         $this->loadFranceData($manager);
+        $this->loadFranceCoordCity($manager);
         //Load German Data
         $this->loadGermanData($manager);
     }
@@ -95,6 +96,33 @@ class AppFixtures extends Fixture
                 $germanCapitalHistory->setDescription($line[2]);
 
                 $manager->persist($germanCapitalHistory);
+
+                if (($i % 50) === 0) {
+                    $manager->flush();
+                    $manager->clear();
+                }
+                $i++;
+            }
+        }
+
+        $manager->flush();
+        fclose($file);
+    }
+    private function loadFranceCoordCity(ObjectManager $manager): void
+    {
+        $fichier = "./france.csv";
+        $file = fopen($fichier, 'r');
+        // Ignore header row
+        fgetcsv($file, 0, ",");
+
+        $i = 0;
+        while (($line = fgetcsv($file, 0, ",")) !== false) {
+            if (count($line) >= 3) {
+                $coord = new France();
+                $coord->setLatitude($line[3]);
+                $coord->setLongitude($line[4]);
+
+                $manager->persist($coord);
 
                 if (($i % 50) === 0) {
                     $manager->flush();

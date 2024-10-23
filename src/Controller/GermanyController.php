@@ -17,4 +17,9 @@ class GermanyController extends AbstractController
             'germanData' => $germanData,
         ]);
     }
+    #[Route('/germany/visit', name: 'app_germany_visit')]
+    public function visitGermany(GermanyRepository $germanyRepository): Response
+    {
+        return $this->render('germany/visit.html.twig', []);
+    }
 }
