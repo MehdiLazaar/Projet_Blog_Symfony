@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\France;
 use App\Entity\Spain;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -10,13 +11,23 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
+        // Load Spain data
+        $this->loadSpainData($manager);
+
+        // Load Historical Capitals data
+        $this->loadFranceData($manager);
+    }
+
+    private function loadSpainData(ObjectManager $manager): void
+    {
         $fichier = "./Spain.csv";
         $file = fopen($fichier, 'r');
-        fgetcsv($file, 0, ","); // Modification du séparateur ici (virgule)
+        // Ignore header row
+        fgetcsv($file, 0, ",");
 
         $i = 0;
-        while (($line = fgetcsv($file, 0, ",")) !== false) { // Modification du séparateur ici aussi
-            if (count($line) >= 4) { // S'assure que la ligne contient au moins 4 éléments
+        while (($line = fgetcsv($file, 0, ",")) !== false) {
+            if (count($line) >= 4) {
                 $spain = new Spain();
                 $spain->setNomVille($line[0]);
                 $spain->setDateCreation($line[1]);
@@ -24,6 +35,35 @@ class AppFixtures extends Fixture
                 $spain->setRegion($line[3]);
 
                 $manager->persist($spain);
+
+                if (($i % 50) === 0) {
+                    $manager->flush();
+                    $manager->clear();
+                }
+                $i++;
+            }
+        }
+
+        $manager->flush();
+        fclose($file);
+    }
+
+    private function loadFranceData(ObjectManager $manager): void
+    {
+        $fichier = "./france.csv";
+        $file = fopen($fichier, 'r');
+        // Ignore header row
+        fgetcsv($file, 0, ",");
+
+        $i = 0;
+        while (($line = fgetcsv($file, 0, ",")) !== false) {
+            if (count($line) >= 3) {
+                $historicalCapital = new France();
+                $historicalCapital->setLocation($line[0]);
+                $historicalCapital->setTimePeriod($line[1]);
+                $historicalCapital->setDetails($line[2]);
+
+                $manager->persist($historicalCapital);
 
                 if (($i % 50) === 0) {
                     $manager->flush();

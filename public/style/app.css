@@ -1,0 +1,18 @@
+.englobe {
+    display: flex; /* Utiliser flexbox */
+    justify-content: flex-end; /* Aligne le contenu à droite */
+    padding: 10px;
+}
+.btn_right {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn_right:hover {
+    background-color: #27ae60; /* Couleur de fond au survol */
+}

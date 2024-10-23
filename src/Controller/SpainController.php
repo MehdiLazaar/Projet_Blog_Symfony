@@ -13,21 +13,24 @@ class SpainController extends AbstractController
     #[Route('/spain', name: 'app_spain')]
     public function index(SpainRepository $spainRepository, Request $request): Response
     {
-        // Get current page from query parameters
         $page = $request->query->getInt('page', 1);
-        // Number of items per page
         $limit = 5;
-        // Fetch the total number of items
         $totalItems = $spainRepository->count([]);
-        // Fetch paginated results
         $spainData = $spainRepository->findBy([], null, $limit, ($page - 1) * $limit);
-        // Calculate total pages
         $totalPages = ceil($totalItems / $limit);
+
+        dump($spainData);
 
         return $this->render('spain/index.html.twig', [
             'spainData' => $spainData,
             'currentPage' => $page,
             'totalPages' => $totalPages,
         ]);
+    }
+
+    #[Route('/spain/visit', name: 'app_spain_visit')]
+    public function visitSpain(SpainRepository $spainRepository): Response
+    {
+        return $this->render('spain/visit.html.twig', []);
     }
 }

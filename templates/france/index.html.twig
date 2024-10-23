@@ -1,20 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FranceController!{% endblock %}
+{% block title %}France Beauty{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <section class="container">
+        <div class="container-fluid p-5 text-black text-center">
+            <h1>France Beauty</h1>
+            <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+            </span>
+            <span class="fi fi-fr mr-2" style="width: 100px; height: 100px;"></span>
+            <p><strong>France</strong>, located in northwestern Europe, is historically and culturally one of the most significant nations in the Western world.
+                It has also played a crucial role in international affairs, with former colonies spread across every continent.
+                Bordered by the Atlantic Ocean and the Mediterranean Sea, as well as the Alps and the Pyrenees, France has long served as a geographic,
+                economic, and linguistic bridge between northern and southern Europe.
+                It is the leading agricultural producer in Europe and one of the world's foremost industrial powers.
+                As one of the oldest nations globally, France emerged from an alliance of duchies and principalities
+                united under a single ruler during the Middle Ages.
+                Today, much like in that era, central authority is concentrated in the state,
+                although a degree of autonomy has been granted to the country's regions in recent decades.
+                The French people regard the state as the primary protector of their liberty, and in turn,
+                the state provides a generous array of services to its citizens, including free education, healthcare, and pension plans.
+                However, this centralizing tendency often clashes with another enduring theme of the French nation: the emphasis on individual supremacy.
+                Historian Jules Michelet remarked on this distinction: "England is an empire, Germany is a nation, a race; France is a person." Similarly,
+                statesman Charles de Gaulle famously quipped, "Only peril can bring the French together.
+                One can’t impose unity out of the blue on a country that has 265 kinds of cheese."
+            </p>
+        </div>
+    </section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Mehdi/OneDrive/Bureau/Mehdi/Projets/Projet_Symfony/src/Controller/FranceController.php'|file_link(0) }}">src/Controller/FranceController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Mehdi/OneDrive/Bureau/Mehdi/Projets/Projet_Symfony/templates/france/index.html.twig'|file_link(0) }}">templates/france/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <section class="container-fluid p-5 text-black">
+        <h2>Historical Capitals of France</h2>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th>City Name</th>
+                <th>Time Period</th>
+                <th>Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for ville in franceData %}
+            <tr>
+                <td>ville.Location</td>
+                <td>ville.TimePeriod</td>
+                <td>ville.details</td>
+            </tr>
+            {% else %}
+                <tr>
+                    <td colspan='4' class="text-center">
+                        No information available.
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
 {% endblock %}
