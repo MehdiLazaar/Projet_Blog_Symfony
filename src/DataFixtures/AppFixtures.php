@@ -22,6 +22,10 @@ class AppFixtures extends Fixture
         $this->loadGermanData($manager);
         //Load Usa Data
         $this->loadUsaData($manager);
+        // Load Mexico Data
+        $this->loadMexicoData($manager);
+        // Load Brazil Data
+        $this->loadBrazilData($manager);
     }
 
     private function loadSpainData(ObjectManager $manager): void
@@ -156,5 +160,82 @@ class AppFixtures extends Fixture
         $manager->flush();
         fclose($file);
     }
+    private function loadMexicoData(ObjectManager $manager): void
+    {
+        $fichier = "./mexicoData.csv";
+        $file = fopen($fichier, 'r');
+        if (!$file) {
+            throw new \Exception("Could not open the file: $fichier");
+        }
+        // Ignore header row
+        fgetcsv($file, 0, ",");
 
+        $i = 0;
+        while (($line = fgetcsv($file, 0, ",")) !== false) {
+            if (count($line) >= 5) {
+                try {
+                    $mex = new Usa();
+                    $mex->setPeriod($line[0]);
+                    $mex->setCapital($line[1]);
+                    $mex->setDescription($line[2]);
+                    $mex->setLatitude((float)$line[3]);
+                    $mex->setLongitude((float)$line[4]);
+
+                    $manager->persist($mex);
+                } catch (\Exception $e) {
+                    echo "Error processing line: " . implode(',', $line) . " - " . $e->getMessage();
+                }
+
+                if (($i % 50) === 0) {
+                    $manager->flush();
+                    $manager->clear();
+                }
+                $i++;
+            } else {
+                echo "Invalid line format: " . implode(',', $line);
+            }
+        }
+
+        $manager->flush();
+        fclose($file);
+    }
+    private function loadBrazilData(ObjectManager $manager): void
+    {
+        $fichier = "./brazilData.csv";
+        $file = fopen($fichier, 'r');
+        if (!$file) {
+            throw new \Exception("Could not open the file: $fichier");
+        }
+        // Ignore header row
+        fgetcsv($file, 0, ",");
+
+        $i = 0;
+        while (($line = fgetcsv($file, 0, ",")) !== false) {
+            if (count($line) >= 5) {
+                try {
+                    $br = new Usa();
+                    $br->setPeriod($line[0]);
+                    $br->setCapital($line[1]);
+                    $br->setDescription($line[2]);
+                    $br->setLatitude((float)$line[3]);
+                    $br->setLongitude((float)$line[4]);
+
+                    $manager->persist($br);
+                } catch (\Exception $e) {
+                    echo "Error processing line: " . implode(',', $line) . " - " . $e->getMessage();
+                }
+
+                if (($i % 50) === 0) {
+                    $manager->flush();
+                    $manager->clear();
+                }
+                $i++;
+            } else {
+                echo "Invalid line format: " . implode(',', $line);
+            }
+        }
+
+        $manager->flush();
+        fclose($file);
+    }
 }

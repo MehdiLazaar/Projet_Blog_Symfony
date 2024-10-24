@@ -1,20 +1,66 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MexicoController!{% endblock %}
+{% block title %}Mexico{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <section class="container">
+        <div class="container-fluid p-5 text-black text-center">
+            <h1>Mexico Beauty</h1>
+            <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+            </span>
+            <span class="fi fi-mx mr-2" style="width: 100px; height: 100px;"></span>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+    </section>
+    <section class="container-fluid p-5 text-black">
+        <h2>Historical Capitals of Mexico</h2>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th>Period</th>
+                <th>Capital</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for city in mexicoData %}
+                <tr>
+                    <td>{{ city.period }}</td>
+                    <td>{{ city.capital }}</td>
+                    <td>{{ city.description }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan='4' class="text-center">
+                        No information available.
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <section class="container my-5">
+        <h2 class="text-center">Map of Historical Capitals</h2>
+        <div id="map" class="mt-4" style="height: 400px;">
+            <script>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+                var map = L.map('map').setView([22.411636999453354, -101.54421287697161], 6);
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Mehdi/OneDrive/Bureau/Mehdi/Projets/Projet_Blog_Symfony/src/Controller/MexicoController.php'|file_link(0) }}">src/Controller/MexicoController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Mehdi/OneDrive/Bureau/Mehdi/Projets/Projet_Blog_Symfony/templates/mexico/index.html.twig'|file_link(0) }}">templates/mexico/index.html.twig</a></code></li>
-    </ul>
-</div>
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+
+                {% for city in mexicoData %}
+                L.marker([{{ city.latitude }}, {{ city.longitude }}])
+                    .addTo(map)
+                    .bindPopup("<b>{{ city.period }}</b><br>{{ city.capitalg }}<br>");
+                {% endfor %}
+            </script>
+        </div>
+    </section>
 {% endblock %}
