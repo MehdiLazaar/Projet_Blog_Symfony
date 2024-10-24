@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3110176-944a-46d3-b3b4-970bfe8e0000" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spain.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Spain.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/germanyData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/germanyData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20241015154428.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20241022134850.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20241023114448.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20241023144157.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20241023160611.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FranceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FranceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/GermanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GermanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SpainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SpainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/City.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Germany.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Germany.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Spain.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Spain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CityRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/france/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/france/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/germany/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/germany/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/spain/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/spain/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +227,7 @@
       <workItem from="1729685914486" duration="10690000" />
       <workItem from="1729766590882" duration="2351000" />
       <workItem from="1729774651806" duration="274000" />
-      <workItem from="1729774946760" duration="1874000" />
+      <workItem from="1729774946760" duration="1980000" />
     </task>
     <servers />
   </component>
