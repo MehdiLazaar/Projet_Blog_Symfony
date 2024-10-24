@@ -1,11 +1,11 @@
-Period,Capital,Description
-Medieval Period,Aachen,Capital of the Carolingian Empire under Charlemagne (late 8th to 9th century)
-Holy Roman Empire (962–1806),Nuremberg,Unofficial capital and site of many imperial diets
-Holy Roman Empire (962–1806),Regensburg,Another political center during parts of the Holy Roman Empire
-Kingdom of Prussia (1701–1871),Berlin,Capital of the Kingdom of Prussia from 1701
-German Empire (1871–1918),Berlin,Official capital of the German Empire
-Weimar Republic (1919–1933),Berlin,Capital of Germany during the Weimar Republic
-Nazi Germany (1933–1945),Berlin,Capital of Nazi Germany
-Post-WWII (1945–1990),Bonn,Provisional capital of West Germany
-Post-WWII (1945–1990),East Berlin,Capital of East Germany
-Reunified Germany (1990–present),Berlin,Official capital of reunified Germany
+Period,Capital,Description,Latitude,Longitude
+Medieval Period,Aachen,Capital of the Carolingian Empire under Charlemagne (late 8th to 9th century),50.7753,6.0839
+Holy Roman Empire (962–1806),Nuremberg,Unofficial capital and site of many imperial diets,49.4521,11.0776
+Holy Roman Empire (962–1806),Regensburg,Another political center during parts of the Holy Roman Empire,49.0135,12.1016
+Kingdom of Prussia (1701–1871),Berlin,Capital of the Kingdom of Prussia from 1701,52.5200,13.4050
+German Empire (1871–1918),Berlin,Official capital of the German Empire,52.5200,13.4050
+Weimar Republic (1919–1933),Berlin,Capital of Germany during the Weimar Republic,52.5200,13.4050
+Nazi Germany (1933–1945),Berlin,Capital of Nazi Germany,52.5200,13.4050
+Post-WWII (1945–1990),Bonn,Provisional capital of West Germany,50.7374,7.0982
+Post-WWII (1945–1990),East Berlin,Capital of East Germany,52.5010,13.4050
+Reunified Germany (1990–present),Berlin,Official capital of reunified Germany,52.5200,13.4050

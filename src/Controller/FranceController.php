@@ -13,8 +13,10 @@ class FranceController extends AbstractController
     public function index(FranceRepository $franceRepository): Response
     {
         $franceData = $franceRepository->findAll();
+        $cities = $franceRepository->findAll();
         return $this->render('france/index.html.twig', [
             'franceData' => $franceData,
+            'cities' => $cities,
         ]);
     }
 
@@ -22,15 +24,5 @@ class FranceController extends AbstractController
     public function visitFrance(FranceRepository $franceRepository): Response
     {
         return $this->render('france/visit.html.twig', []);
-    }
-
-    #[Route('/france/map', name: 'app_france_map')]
-    public function mapFrance(FranceRepository $franceRepository): Response
-    {
-        $cities = $franceRepository->findAll();
-
-        return $this->render('france/index.html.twig', [
-            'cities' => $cities,
-        ]);
     }
 }

@@ -22,6 +22,12 @@ class Germany
     #[ORM\Column(length: 255)]
     private ?string $description = null;
 
+    #[ORM\Column]
+    private ?float $Latitude = null;
+
+    #[ORM\Column]
+    private ?float $Longitude = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +65,30 @@ class Germany
     public function setDescription(string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getLatitude(): ?float
+    {
+        return $this->Latitude;
+    }
+
+    public function setLatitude(float $Latitude): static
+    {
+        $this->Latitude = $Latitude;
+
+        return $this;
+    }
+
+    public function getLongitude(): ?float
+    {
+        return $this->Longitude;
+    }
+
+    public function setLongitude(float $Longitude): static
+    {
+        $this->Longitude = $Longitude;
 
         return $this;
     }

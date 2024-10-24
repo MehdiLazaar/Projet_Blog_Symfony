@@ -13,8 +13,10 @@ class GermanyController extends AbstractController
     public function index(GermanyRepository $germanRepository): Response
     {
         $germanData = $germanRepository->findAll();
+        $cities = $germanRepository->findAll();
         return $this->render('germany/index.html.twig', [
             'germanData' => $germanData,
+            'cities' => $cities,
         ]);
     }
     #[Route('/germany/visit', name: 'app_germany_visit')]

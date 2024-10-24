@@ -121,6 +121,27 @@
             </ul>
         </nav>
     </section>
+    <section class="container my-5">
+        <h2 class="text-center">Map of Historical Capitals</h2>
+        <div id="map" class="mt-4" style="height: 400px;">
+            <script>
+
+                var map = L.map('map').setView([40.412669332279876, -4.330849093068801], 6);
+
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+
+                {% for city in spainData %}
+                L.marker([{{ city.latitude }}, {{ city.longitude }}])
+                    .addTo(map)
+                    .bindPopup("<b>{{ city.nomVille }}</b><br>{{ city.DateCreation }}<br>{{ city.Region }}");
+                {% endfor %}
+            </script>
+        </div>
+    </section>
     <section>
         <div class="englobe">
             <a class="btn_right" href="{{ path('app_spain_visit') }}" role="button">Where to go in Spain</a>

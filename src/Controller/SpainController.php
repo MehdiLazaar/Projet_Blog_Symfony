@@ -14,6 +14,7 @@ class SpainController extends AbstractController
     #[Route('/spain', name: 'app_spain')]
     public function index(SpainRepository $spainRepository, Request $request): Response
     {
+        $cities = $spainRepository->findAll();
         $page = $request->query->getInt('page', 1);
         $limit = 5;
         $totalItems = $spainRepository->count([]);
@@ -26,6 +27,7 @@ class SpainController extends AbstractController
             'spainData' => $spainData,
             'currentPage' => $page,
             'totalPages' => $totalPages,
+            'cities' => $cities,
         ]);
     }
     #[Route('/spain/visit', name: 'app_spain_visit')]

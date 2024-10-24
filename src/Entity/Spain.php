@@ -25,6 +25,12 @@ class Spain
     #[ORM\Column(length: 255)]
     private ?string $Region = null;
 
+    #[ORM\Column]
+    private ?float $Latitude = null;
+
+    #[ORM\Column]
+    private ?float $Longitude = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +80,30 @@ class Spain
     public function setRegion(string $Region): static
     {
         $this->Region = $Region;
+
+        return $this;
+    }
+
+    public function getLatitude(): ?float
+    {
+        return $this->Latitude;
+    }
+
+    public function setLatitude(float $Latitude): static
+    {
+        $this->Latitude = $Latitude;
+
+        return $this;
+    }
+
+    public function getLongitude(): ?float
+    {
+        return $this->Longitude;
+    }
+
+    public function setLongitude(float $Longitude): static
+    {
+        $this->Longitude = $Longitude;
 
         return $this;
     }

@@ -36,6 +36,8 @@ class AppFixtures extends Fixture
                 $spain->setDateCreation($line[1]);
                 $spain->setAbreviation($line[2]);
                 $spain->setRegion($line[3]);
+                $spain->setLatitude($line[4]);
+                $spain->setLongitude($line[5]);
 
                 $manager->persist($spain);
 
@@ -95,6 +97,8 @@ class AppFixtures extends Fixture
                 $german->setPeriod($line[0]);
                 $german->setCapital($line[1]);
                 $german->setDescription($line[2]);
+                $german->setLatitude($line[3]);
+                $german->setLongitude($line[4]);
 
                 $manager->persist($german);
 

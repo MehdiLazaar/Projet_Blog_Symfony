@@ -1,11 +1,11 @@
-﻿Nom de Ville,Date Création,Abreviation,Region
-Cordoba,152 av. J.-C.,CO,Andalousie
-Cangas de Onis,8ᵉ siècle (718),CO,Asturies
-Barcelone,1ᵉʳ siècle av. J.-C,BCN,Catalogne
-Toledo,2ᵉ siècle av. J.-C,TO,Castille-La Manche
-Madrid,9ᵉ siècle,MAD,Communauté de Madrid
-Valladolid,1074,VA,Castille-et-León
-Séville,8ᵉ siècle av. J.-C,SEV,Andalousie
-Cadix,1104 av. J.-C,CA,Andalousie
-Valence,138 av. J.-C,VLC,Communauté valencienne
-Burgos,884,BU,Castille-et-León
+﻿Nom de Ville,Date Création,Abreviation,Region,Latitude,Longitude
+Cordoba,152 av. J.-C.,CO,Andalousie,37.8882,-4.7794
+Cangas de Onis,8ᵉ siècle (718),CO,Asturies,43.3601,-4.8170
+Barcelone,1ᵉʳ siècle av. J.-C,BCN,Catalogne,41.3851,2.1734
+Toledo,2ᵉ siècle av. J.-C,TO,Castille-La Manche,39.8628,-4.0273
+Madrid,9ᵉ siècle,MAD,Communauté de Madrid,40.4168,-3.7038
+Valladolid,1074,VA,Castille-et-León,41.6523,-4.7284
+Séville,8ᵉ siècle av. J.-C,SEV,Andalousie,37.3886,-5.9823
+Cadix,1104 av. J.-C,CA,Andalousie,36.5271,-6.2884
+Valence,138 av. J.-C,VLC,Communauté valencienne,39.4699,-0.3763
+Burgos,884,BU,Castille-et-León,42.3404,-3.6959
