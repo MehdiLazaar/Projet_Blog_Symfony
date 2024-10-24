@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3110176-944a-46d3-b3b4-970bfe8e0000" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/germany/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/germany/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Brazildetails.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mexicodetails.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Commun/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Commun/navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +194,7 @@
       <recent name="C:\Users\Mehdi\OneDrive\Bureau\Mehdi\Projets\Projet_Symfony\templates\france" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mehdi\OneDrive\Bureau\Mehdi\Projets\Projet_Blog_Symfony" />
       <recent name="C:\Users\Mehdi\OneDrive\Bureau\Mehdi\Projets\Projet_Symfony" />
       <recent name="C:\Users\Mehdi\OneDrive\Bureau\Mehdi\Projets\Projet_Symfony\Projet_Blog" />
     </key>
@@ -227,7 +233,7 @@
       <workItem from="1729685914486" duration="10690000" />
       <workItem from="1729766590882" duration="2351000" />
       <workItem from="1729774651806" duration="274000" />
-      <workItem from="1729774946760" duration="1980000" />
+      <workItem from="1729774946760" duration="4528000" />
     </task>
     <servers />
   </component>

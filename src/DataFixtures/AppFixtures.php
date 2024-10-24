@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\France;
 use App\Entity\Germany;
 use App\Entity\Spain;
+use App\Entity\Usa;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
@@ -19,6 +20,8 @@ class AppFixtures extends Fixture
         $this->loadFranceData($manager);
         //Load German Data
         $this->loadGermanData($manager);
+        //Load Usa Data
+        $this->loadUsaData($manager);
     }
 
     private function loadSpainData(ObjectManager $manager): void
@@ -113,4 +116,45 @@ class AppFixtures extends Fixture
         $manager->flush();
         fclose($file);
     }
+
+    private function loadUsaData(ObjectManager $manager): void
+    {
+        $fichier = "./usa.csv";
+        $file = fopen($fichier, 'r');
+        if (!$file) {
+            throw new \Exception("Could not open the file: $fichier");
+        }
+        // Ignore header row
+        fgetcsv($file, 0, ",");
+
+        $i = 0;
+        while (($line = fgetcsv($file, 0, ",")) !== false) {
+            if (count($line) >= 5) {
+                try {
+                    $usa = new Usa();
+                    $usa->setPeriod($line[0]);
+                    $usa->setCapital($line[1]);
+                    $usa->setDescription($line[2]);
+                    $usa->setLatitude((float)$line[3]);
+                    $usa->setLongitude((float)$line[4]);
+
+                    $manager->persist($usa);
+                } catch (\Exception $e) {
+                    echo "Error processing line: " . implode(',', $line) . " - " . $e->getMessage();
+                }
+
+                if (($i % 50) === 0) {
+                    $manager->flush();
+                    $manager->clear();
+                }
+                $i++;
+            } else {
+                echo "Invalid line format: " . implode(',', $line);
+            }
+        }
+
+        $manager->flush();
+        fclose($file);
+    }
+
 }
