@@ -17,7 +17,6 @@ class AppFixtures extends Fixture
 
         // Load France Data
         $this->loadFranceData($manager);
-        $this->loadFranceCoordCity($manager);
         //Load German Data
         $this->loadGermanData($manager);
     }
@@ -62,12 +61,14 @@ class AppFixtures extends Fixture
         $i = 0;
         while (($line = fgetcsv($file, 0, ",")) !== false) {
             if (count($line) >= 3) {
-                $historicalCapital = new France();
-                $historicalCapital->setLocation($line[0]);
-                $historicalCapital->setTimePeriod($line[1]);
-                $historicalCapital->setDetails($line[2]);
+                $france = new France();
+                $france->setLocation($line[0]);
+                $france->setTimePeriod($line[1]);
+                $france->setDetails($line[2]);
+                $france->setLatitude($line[3]);
+                $france->setLongitude($line[4]);
 
-                $manager->persist($historicalCapital);
+                $manager->persist($france);
 
                 if (($i % 50) === 0) {
                     $manager->flush();
@@ -90,39 +91,12 @@ class AppFixtures extends Fixture
         $i = 0;
         while (($line = fgetcsv($file, 0, ",")) !== false) {
             if (count($line) >= 3) {
-                $germanCapitalHistory = new Germany();
-                $germanCapitalHistory->setPeriod($line[0]);
-                $germanCapitalHistory->setCapital($line[1]);
-                $germanCapitalHistory->setDescription($line[2]);
+                $german = new Germany();
+                $german->setPeriod($line[0]);
+                $german->setCapital($line[1]);
+                $german->setDescription($line[2]);
 
-                $manager->persist($germanCapitalHistory);
-
-                if (($i % 50) === 0) {
-                    $manager->flush();
-                    $manager->clear();
-                }
-                $i++;
-            }
-        }
-
-        $manager->flush();
-        fclose($file);
-    }
-    private function loadFranceCoordCity(ObjectManager $manager): void
-    {
-        $fichier = "./france.csv";
-        $file = fopen($fichier, 'r');
-        // Ignore header row
-        fgetcsv($file, 0, ",");
-
-        $i = 0;
-        while (($line = fgetcsv($file, 0, ",")) !== false) {
-            if (count($line) >= 3) {
-                $coord = new France();
-                $coord->setLatitude($line[3]);
-                $coord->setLongitude($line[4]);
-
-                $manager->persist($coord);
+                $manager->persist($german);
 
                 if (($i % 50) === 0) {
                     $manager->flush();
